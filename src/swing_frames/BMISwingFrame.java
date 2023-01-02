@@ -28,6 +28,7 @@ public class BMISwingFrame extends JFrame implements ActionListener {
   private JPanel identitySection() {
     JPanel identityPanel = new JPanel();
     identityPanel.setLayout(new BoxLayout(identityPanel, BoxLayout.Y_AXIS));
+    identityPanel.setBackground(null);
 
     JLabel projectNameLabel = new JLabel();
     projectNameLabel.setBorder(new EmptyBorder(10, 10, 0, 10));
@@ -43,6 +44,7 @@ public class BMISwingFrame extends JFrame implements ActionListener {
 
     JPanel projectGroupPanel = new JPanel();
     projectGroupPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 16, 0));
+    projectGroupPanel.setBackground(null);
 
     JLabel projectGroupLabel = new JLabel();
     projectGroupLabel.setText("Nama anggota:");
@@ -51,17 +53,23 @@ public class BMISwingFrame extends JFrame implements ActionListener {
 
     JPanel projectGroupNamesPanel = new JPanel();
     projectGroupNamesPanel.setLayout(new BoxLayout(projectGroupNamesPanel, BoxLayout.Y_AXIS));
+    projectGroupNamesPanel.setBackground(null);
 
     JLabel groupName1Label = new JLabel();
-    groupName1Label.setText("- Syahda Romansyah (1101190402)");
+    groupName1Label.setText("- Faisal Akbar Tasmara (1101190391)");
     groupName1Label.setFont(new Font("Inter", Font.BOLD, 16));
 
     JLabel groupName2Label = new JLabel();
-    groupName2Label.setText("- Sedli Irfangi (1101202557)");
+    groupName2Label.setText("- Syahda Romansyah (1101190402)");
     groupName2Label.setFont(new Font("Inter", Font.BOLD, 16));
+
+    JLabel groupName3Label = new JLabel();
+    groupName3Label.setText("- Sedli Irfangi (1101202557)");
+    groupName3Label.setFont(new Font("Inter", Font.BOLD, 16));
 
     projectGroupNamesPanel.add(groupName1Label);
     projectGroupNamesPanel.add(groupName2Label);
+    projectGroupNamesPanel.add(groupName3Label);
 
     projectGroupPanel.add(projectGroupLabel);
     projectGroupPanel.add(projectGroupNamesPanel);
@@ -77,9 +85,11 @@ public class BMISwingFrame extends JFrame implements ActionListener {
     JPanel bmiCalcPanel = new JPanel();
     bmiCalcPanel.setLayout(new BoxLayout(bmiCalcPanel, BoxLayout.Y_AXIS));
     bmiCalcPanel.setBorder(new EmptyBorder(20, 0, 20, 0));
+    bmiCalcPanel.setBackground(null);
 
     JPanel bmiCalcHeightPanel = new JPanel();
     bmiCalcHeightPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 0));
+    bmiCalcHeightPanel.setBackground(null);
 
     JLabel bmiCalcHeightLabel = new JLabel();
     bmiCalcHeightLabel.setText("Masukan tinggi badan Anda (cm):");
@@ -96,6 +106,7 @@ public class BMISwingFrame extends JFrame implements ActionListener {
 
     JPanel bmiCalcWeightPanel = new JPanel();
     bmiCalcWeightPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 18, 0));
+    bmiCalcWeightPanel.setBackground(null);
 
     JLabel bmiCalcWeightLabel = new JLabel();
     bmiCalcWeightLabel.setText("Masukan berat badan Anda (kg):");
@@ -119,8 +130,10 @@ public class BMISwingFrame extends JFrame implements ActionListener {
   private JPanel bmiResultSection() {
     JPanel bmiResultPanel = new JPanel();
     bmiResultPanel.setLayout(new BoxLayout(bmiResultPanel, BoxLayout.Y_AXIS));
+    bmiResultPanel.setBackground(null);
 
     JPanel bmiCalcResultPanel = new JPanel();
+    bmiCalcResultPanel.setBackground(null);
 
     JLabel bmiCalcResultLabel = new JLabel();
     bmiCalcResultLabel.setText("BMI Anda adalah");
@@ -137,6 +150,7 @@ public class BMISwingFrame extends JFrame implements ActionListener {
     bmiCalcResultPanel.add(this.bmiCalcResultTF);
 
     JPanel bmiWeightStatusPanel = new JPanel();
+    bmiWeightStatusPanel.setBackground(null);
 
     JLabel bmiWeightStatusLabel = new JLabel();
     bmiWeightStatusLabel.setText("Status berat Anda:");
@@ -162,6 +176,7 @@ public class BMISwingFrame extends JFrame implements ActionListener {
     this.setTitle("Kalkulator BMI");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
+    this.getContentPane().setBackground(new Color(0xfde68a));
 
     this.getContentPane().add(this.identitySection());
     this.getContentPane().add(this.bmiCalcSection());
